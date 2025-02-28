@@ -5,8 +5,11 @@ from gettext import translation
 import telebot
 import random
 from telebot import types
-token = '8015847162:AAExJZzjQ8xAWwLKXT8ZBKJbKWXKE3FQhx0'
-bot = telebot.TeleBot(token)
+import os
+
+TELEGRAM_API_TOKEN = os.getenv('TELEGRAM_API_TOKEN')
+
+bot = telebot.TeleBot(TELEGRAM_API_TOKEN)
 user_scores = {}
 
 words = {
